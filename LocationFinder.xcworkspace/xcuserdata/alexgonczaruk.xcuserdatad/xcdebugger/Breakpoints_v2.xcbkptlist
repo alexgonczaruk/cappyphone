@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "E38373A6-C12E-4817-8D11-3B56A13BE340"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E45F4FC4-7047-4644-9BB1-E2C52FA99E06"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LocationFinder/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "updateCaddyDistance(message:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E45F4FC4-7047-4644-9BB1-E2C52FA99E06 - ae205a6ffcab7d68"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LocationFinder.ViewController.locationManager(_: __C.CLLocationManager, _: __C.UISwitch, didUpdateLocations: Swift.Array&lt;__C.CLLocation&gt;) -&gt; ()"
+                  moduleName = "LocationFinder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alexgonczaruk/Library/CloudStorage/OneDrive-UniversityofWaterloo/4A/MTE%20481/ShehanFinder/LocationFinder/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "361">
+               </Location>
+               <Location
+                  uuid = "E45F4FC4-7047-4644-9BB1-E2C52FA99E06 - ae205a6ffcab7daa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LocationFinder.ViewController.locationManager(_: __C.CLLocationManager, _: __C.UISwitch, didUpdateLocations: Swift.Array&lt;__C.CLLocation&gt;) -&gt; ()"
+                  moduleName = "LocationFinder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alexgonczaruk/Library/CloudStorage/OneDrive-UniversityofWaterloo/4A/MTE%20481/ShehanFinder/LocationFinder/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "176">
+               </Location>
+               <Location
+                  uuid = "E45F4FC4-7047-4644-9BB1-E2C52FA99E06 - ae205a6ffcab7daa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LocationFinder.ViewController.locationManager(_: __C.CLLocationManager, _: __C.UISwitch, didUpdateLocations: Swift.Array&lt;__C.CLLocation&gt;) -&gt; ()"
+                  moduleName = "LocationFinder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alexgonczaruk/Library/CloudStorage/OneDrive-UniversityofWaterloo/4A/MTE%20481/ShehanFinder/LocationFinder/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "140">
+               </Location>
+               <Location
+                  uuid = "E45F4FC4-7047-4644-9BB1-E2C52FA99E06 - 244069a581fa2d3d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LocationFinder.ViewController.locationManager(_: __C.CLLocationManager, didUpdateLocations: Swift.Array&lt;__C.CLLocation&gt;) -&gt; ()"
+                  moduleName = "LocationFinder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alexgonczaruk/Library/CloudStorage/OneDrive-UniversityofWaterloo/4A/MTE%20481/ShehanFinder/LocationFinder/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "132">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8AC64E3A-DCBA-4C0B-BC64-0AAC4DF6E72B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LocationFinder/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2603F6B8-1ABE-45E3-B468-A69A9C931B57"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LocationFinder/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BA7E1787-47E7-4DB5-ACE7-B8ADF647F852"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LocationFinder/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "sendMessage(message:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7D825950-8FA0-44EF-9292-5030C96C3C1E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LocationFinder/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "sendMessage(message:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7D825950-8FA0-44EF-9292-5030C96C3C1E - ba5b39a9b7197d6c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LocationFinder.ViewController.sendMessage(message: Swift.String) -&gt; ()"
+                  moduleName = "LocationFinder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alexgonczaruk/Library/CloudStorage/OneDrive-UniversityofWaterloo/4A/MTE%20481/ShehanFinder/LocationFinder/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "467">
+               </Location>
+               <Location
+                  uuid = "7D825950-8FA0-44EF-9292-5030C96C3C1E - 53655dbc39055205"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.UnsafePointer&lt;Swift.UInt8&gt;) -&gt; Swift.Optional&lt;Swift.Int&gt; in LocationFinder.ViewController.sendMessage(message: Swift.String) -&gt; ()"
+                  moduleName = "LocationFinder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alexgonczaruk/Library/CloudStorage/OneDrive-UniversityofWaterloo/4A/MTE%20481/ShehanFinder/LocationFinder/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "109">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
