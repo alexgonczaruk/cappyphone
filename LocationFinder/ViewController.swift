@@ -16,9 +16,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate, StreamDelegat
     
     @IBOutlet var label: UILabel!
     @IBOutlet var label1: UILabel!
+    @IBOutlet var STOP: UIButton!
+    @IBOutlet var START: UIButton!
+    @IBOutlet var ConnectBtn: UIButton!
+    @IBOutlet var yourImageView: UIImageView!
     var manager: CLLocationManager?
     
-    let ipAddress = "192.168.2.36"
+    let ipAddress = "192.168.2.52"
     let port: UInt32 = 8888
     let bufferSize = 1024
     var buffer = [UInt8](repeating: 0, count: 1024)
@@ -26,22 +30,60 @@ class ViewController: UIViewController, CLLocationManagerDelegate, StreamDelegat
     var outputStream: OutputStream?
     var connected: Bool = false // to indicate connected button press
     var success: Bool = false // to indicate successful connection
+    
+    var ReadyToSend = true
         
     override func viewDidLoad() {
         super.viewDidLoad()
         label.text = "connecting to GPS..."
         label1.text = "caddy is not connected"
         label1.textColor = UIColor.black
+        
+        START.layer.borderWidth = 0.0 // No border
+        START.layer.cornerRadius = 35.0
+        START.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20.0)
+        START.setTitleColor(UIColor.white, for: .normal)
+        START.backgroundColor = UIColor(red: 0.0, green: 191/255.0, blue: 1.0, alpha: 1.0)
+        
+        
+        STOP.layer.borderColor = UIColor(red: 0.0, green: 191/255.0, blue: 1.0, alpha: 1.0).cgColor
+        
+        STOP.layer.cornerRadius = 35.0
+        
+        STOP.layer.borderWidth = 5.0
+        STOP.layer.borderColor = UIColor(red: 0.0, green: 191/255.0, blue: 1.0, alpha: 1.0).cgColor
+
+        // STOP.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20.0) // Adjust the font size
+        // STOP.setTitleColor(UIColor.blue, for: .normal)
+        rotateImage()
     }
+    
+    func rotateImage() {
+            // Create a rotation animation
+            let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
+            rotationAnimation.toValue = NSNumber(value: Double.pi * 2) // Full rotation (360 degrees)
+            rotationAnimation.duration = 5.0 // Time taken for one complete rotation
+            rotationAnimation.isCumulative = true
+            rotationAnimation.repeatCount = Float.infinity // Infinite loop
+
+            // Apply the rotation animation to yourImageView's layer
+            yourImageView.layer.add(rotationAnimation, forKey: "rotationAnimation")
+        }
     
     func sendMessage(message: String) {
         if connected == false {
+            print("not connected")
             return
         }
+        
         guard let data = message.data(using: .utf8) else {
             return
         }
-        _ = data.withUnsafeBytes { outputStream?.write($0, maxLength: data.count)}
+        if ReadyToSend == true {
+            print("SENDING: \(message)")
+            _ = data.withUnsafeBytes { outputStream?.write($0, maxLength: data.count)}
+            ReadyToSend = false
+        }
     }
     
     func checkForResponse() {
@@ -54,12 +96,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate, StreamDelegat
                 }
             }
             if let message = String(bytes: self.buffer, encoding: .utf8) {
-                self.updateCaddyDistance(message: message)
+                self.receiveData(message: message)
             }
         }
     }
     
-    func updateCaddyDistance(message: String) {
+    func receiveData(message: String) {
+        // self.ConnectBtn.setTitle("Connected", for: .normal)
+        // self.ConnectBtn.setTitleColor(UIColor.green, for: .normal)
         DispatchQueue.main.async {
             if message.hasPrefix("PI:") {
                 let components = message.components(separatedBy: "PI:")
@@ -70,7 +114,21 @@ class ViewController: UIViewController, CLLocationManagerDelegate, StreamDelegat
                     self.label1.text = "Golf caddy is \(numberString)m away"
                 }
                 
+            } else if message.hasPrefix("ACTION:") {
+                let components = message.components(separatedBy: "ACTION:")
+                
+                if let action = components.dropFirst().first {
+                    if action.contains("STOP") {
+                        print("STOPPING!!! OBSTACLE")
+                        self.label1.text = "Obstacle Detected. Caddy set to STOP"
+                    }
+                } else {
+                    print("No second element in the 'components' array.")
+                }
+            } else if message.hasPrefix("SETUP:") {
+                print("CONNECTION HAS BEEN ESTABLISHED")
             }
+            self.ReadyToSend = true
         }
     }
 
@@ -123,6 +181,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, StreamDelegat
         inputStream?.open()
         outputStream?.open()
         sendMessage(message: "ACTION:SOCKET IS OPEN")
+        
     }
 }
 
