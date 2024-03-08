@@ -60,6 +60,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, StreamDelegat
     
     func rotateImage() {
             // Create a rotation animation
+            print("ROTATING")
             let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
             rotationAnimation.toValue = NSNumber(value: Double.pi * 2) // Full rotation (360 degrees)
             rotationAnimation.duration = 5.0 // Time taken for one complete rotation
@@ -79,11 +80,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate, StreamDelegat
         guard let data = message.data(using: .utf8) else {
             return
         }
-        if ReadyToSend == true {
-            print("SENDING: \(message)")
-            _ = data.withUnsafeBytes { outputStream?.write($0, maxLength: data.count)}
-            ReadyToSend = false
-        }
+//        if ReadyToSend == true {
+        print("SENDING: \(message)")
+        _ = data.withUnsafeBytes { outputStream?.write($0, maxLength: data.count)}
+//            ReadyToSend = false
+//        }
     }
     
     func checkForResponse() {
@@ -128,7 +129,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, StreamDelegat
             } else if message.hasPrefix("SETUP:") {
                 print("CONNECTION HAS BEEN ESTABLISHED")
             }
-            self.ReadyToSend = true
+//            self.ReadyToSend = true
         }
     }
 
